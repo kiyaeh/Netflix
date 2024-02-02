@@ -16,7 +16,9 @@ function Header() {
       }
     });
     return () => {
-      window.removeEventListener("scroll");
+      window.removeEventListener("scroll", () => {
+        handleShow(false);
+      });
     };
   }, []);
   return (
